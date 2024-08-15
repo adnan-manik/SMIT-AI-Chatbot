@@ -81,6 +81,7 @@ nav a:hover{
 
 .prodRow{
     display: flex;
+    margin-bottom: 26px;
 }
 .prodContainer{
     display: table;
@@ -94,6 +95,7 @@ nav a:hover{
 }
 .prodCard:hover{
     transform: scale(1.1);
+    transform-origin: center;
 }
 .prodCard img{
     width: 100%;
@@ -114,4 +116,49 @@ nav a:hover{
     margin: 6px;
     padding: 0%; 
     color: hsl(0, 0%, 30%);
+}
+
+.footer{
+    background-color: rgb(24, 24, 24);
+}
+
+.footContainer{
+    display: flex;
+    width: 100%;
+}
+
+.col{
+    min-width: 25%;
+    min-width: 300px;
+    display: inline-block;
+}
+
+.col ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    margin-bottom: 6px;
+}
+
+.col h4{
+    color: #ffff;
+    border-bottom: rgb(63, 63, 228);
+}
+.col ul li a{
+    text-decoration: none;
+    color: hsl(0, 0%, 50%);
+}
+
+.col ul li a:hover{
+    color: white;
+    margin-left: 6px;
+}
+
+.socialLinks ul li {
+    display: inline-block;
+    margin-right: 12px;
+}
+.icons{
+    transform: scale(1.1);
+    
 }
