@@ -123,14 +123,15 @@ nav a:hover{
 }
 
 .footContainer{
-    display: flex;
-    width: 100%;
+    display: flow-root;
+    margin-left: 24px;
+
 }
 
 .col{
     min-width: 25%;
     min-width: 300px;
-    display: inline-block;
+    float: left;
 }
 
 .col ul {
@@ -142,7 +143,6 @@ nav a:hover{
 
 .col h4{
     color: #ffff;
-    border-bottom: rgb(63, 63, 228);
 }
 .col ul li a{
     text-decoration: none;
