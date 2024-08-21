@@ -25,33 +25,33 @@
     </nav>
     <main>
         <div class="slider">
-        <a href="#" class="prev" onclick="plusSlides(-1)">&#10094;</a>
-        <div class="slideShowContainer">
-            <div class="slides">
-                <img src="/images/shoes2.png" alt="nike just do it cover banner">
+            <a href="#" class="prev" onclick="plusSlides(-1)">&#10094;</a>
+            <div class="slideShowContainer">
+                <div class="slides">
+                    <img src="/images/shoes2.png" alt="nike just do it cover banner">
+                </div>
+                <div class="slides">
+                    <img src="/images/shoes3.png" alt="nike just do it cover banner">
+                </div>
+                <div class="slides">
+                    <img src="/images/shoes1.png" alt="nike just do it cover banner">
+                </div>
+                <div class="slides">
+                    <img src="/images/silver-shoes.png" alt="nike just do it cover banner">
+                </div>
+
+
+
             </div>
-            <div class="slides">
-                <img src="/images/shoes3.png" alt="nike just do it cover banner">
-            </div>
-            <div class="slides">
-                <img src="/images/shoes1.png" alt="nike just do it cover banner">
-            </div>
-            <div class="slides">
-                <img src="/images/silver-shoes.png" alt="nike just do it cover banner">
-            </div>
-            
-            
-            
+            <a href="#" class="next" onclick="plusSlides(1)">&#10095;</a>
         </div>
-        <a href="#" class="next" onclick="plusSlides(1)">&#10095;</a>
-    </div>
 
         <div style="text-align:center">
             <span class="dot" onclick="currentSlide(1)"></span>
             <span class="dot" onclick="currentSlide(2)"></span>
             <span class="dot" onclick="currentSlide(3)"></span>
             <span class="dot" onclick="currentSlide(4)"></span>
-          </div>
+        </div>
         <div class="shopNow">
             <h1 style="  text-align: center; font-weight:1000; font-size: 3em;">WIN FROM THE START</h1>
             <a href="">Shop Now</a>
@@ -59,7 +59,7 @@
         <h1 style="font-size: 3em; font-weight: bolder;">Products</h1><br>
         <div class="prodContainer">
             <div class="prodRow">
-               
+
 
                 <div class="prodCard">
                     <div class="imgWrap">
@@ -149,7 +149,7 @@
     </main>
     <footer class="footer">
         <div class="footContainer">
-           <div class="col">
+            <div class="col">
                 <h4>Company</h4>
                 <ul>
                     <li><a href="#">About us</a></li>
@@ -157,8 +157,8 @@
                     <li><a href="#">Privacy Policy</a></li>
                     <li><a href="#">Affiliate Programs</a></li>
                 </ul>
-           </div>
-           <div class="col">
+            </div>
+            <div class="col">
                 <h4>Get Help</h4>
                 <ul>
                     <li><a href="#">FAQ</a></li>
@@ -168,8 +168,8 @@
                     <li><a href="#">Payment Options</a></li>
                     <li><a href="#">Order Cancellation</a></li>
                 </ul>
-           </div>
-           <div class="col">
+            </div>
+            <div class="col">
                 <h4>Online Shop</h4>
                 <ul>
                     <li><a href="#">Shoes</a></li>
@@ -177,8 +177,8 @@
                     <li><a href="#">Bags</a></li>
                     <li><a href="#">Kids</a></li>
                 </ul>
-           </div>
-           <div class="col">
+            </div>
+            <div class="col">
                 <h4>Follow Us</h4>
                 <div class="socialLinks">
                     <ul>
@@ -188,7 +188,7 @@
                         <li><a href="#" class="icons"><i class="fa-brands fa-linkedin"></i></a></li>
                     </ul>
                 </div>
-           </div>
+            </div>
         </div>
         <div style="background-color: rgb(22, 22, 22); text-align: center;">
             <p style="color: rgb(94, 94, 94);">&copy;2024 ADNAN KAMAL (Nike web for practice)</p>
@@ -196,37 +196,5 @@
     </footer>
 
 </body>
-
-<script>
-    let slideIndex=1;
-    showSlide(slideIndex);
-    
-    function plusSlides(n){
-        showSlide(slideIndex+=n);
-    }
-
-    function currentSlide(n){
-        slideIndex=n;
-        showSlide(slideIndex);
-    }
-
-    function showSlide(n){
-        let slides=document.getElementsByClassName("slides");
-        let dots= document.getElementsByClassName("dot")
-    
-    if( n > slides.length){ slideIndex = 1 }
-    if( n < 1 ) { slideIndex = slides.length }
-
-        
-
-    for(let i=0; i<slides.length;i++){
-        slides[i].style.display= "none";
-        dots[i].className = dots[i].className.replace(" active", "");
-    }
-    slides[slideIndex-1].style.display="block";
-    dots[slideIndex-1].className += " active";
-    console.log(slideIndex);
-    }
-</script>
 
 </html>
