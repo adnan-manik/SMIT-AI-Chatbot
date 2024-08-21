@@ -6,6 +6,10 @@ body{
     font-family: "Helvetica Now Text", Helvetica, Arial, sans-serif;;
 
 }
+main{
+    flex: auto;
+    flex-flow: wrap;
+}
 
 .header{
     padding: 5px;
@@ -55,13 +59,51 @@ nav a:hover{
     border-bottom: 2px solid black;
     transform: scale(1.1);
 }
-
-.slider img{
-    display: block;
-    width: 100%;
-    height: 100%;
+.slider{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin: auto;
 }
-.slider a{
+
+.slideShowContainer{
+    /* width: 100%; */
+    margin-top: 2%;
+    margin: auto;
+    display: inline-flex;
+    height: 70vh;
+}
+.slides {
+    animation-name: fade;
+    animation-duration: 1.5s;
+  }
+.slides{
+    display: none;
+    transition: fade ease-in 1s;
+}
+
+.slides img{
+    height: 100%;
+    padding-right: 2%;
+    padding-left: 2%;
+}
+
+.dot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+  }
+  
+  .active, .dot:hover {
+    background-color: #717171;
+  }
+.shopNow a{
+    
     text-decoration: none;
     color: rgb(255, 255, 255);
     padding: 10px;
@@ -73,6 +115,18 @@ nav a:hover{
     text-wrap: nowrap;
     overflow: visible;
     border-radius: 25px;
+}
+.next, .prev{
+    display: inline-block;
+    text-decoration: none;
+    color: hsl(0, 0%, 93%);
+    border-radius: 50px;
+    font-size: x-large;
+    align-self: center;
+}
+
+.prev{
+    order: -1;
 }
 
  .slider a:hover{
@@ -161,4 +215,13 @@ nav a:hover{
 .icons{
     transform: scale(1.1);
     
+}
+
+@keyframes fade {
+    from {
+        opacity: 0.2;
+    }
+    to {
+       opacity: 1;
+  }
 }

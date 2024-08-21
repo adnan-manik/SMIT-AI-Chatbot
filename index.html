@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Nike</title>
-    <link rel="shortcut icon" href="/images/nike-logo.webp" type="image/x-icon">
+    <link rel="shortcut icon" href="images/nike-logo.webp" type="image/x-icon">
     <link rel="stylesheet" href="style.css">
     <script src="https://kit.fontawesome.com/b2bcb592d9.js" crossorigin="anonymous"></script>
 </head>
@@ -15,7 +15,7 @@
         <h4 style="display: inline; ">Nike. Just Do it</h4>
     </header>
     <nav class="navbar">
-        <a href=""><img src="/images/nike-logo.webp" alt="nike-logo" id="headLogo"></a>
+        <a href=""><img src="images/nike-logo.webp" alt="nike-logo" id="headLogo"></a>
         <ul>
             <li><a href="">Home</a></li>
             <li><a href="">Products</a></li>
@@ -25,17 +25,38 @@
     </nav>
     <main>
         <div class="slider">
-            <!-- Make slider later -->
-            <div class="imgWrapper">
-                <img src="/images/nike-just-do-it.jpg" alt="nike jusst do it cover banner">
+        <a href="#" class="prev" onclick="plusSlides(-1)">&#10094;</a>
+        <div class="slideShowContainer">
+            <div class="slides">
+                <img src="C:\Users\Salman\Desktop\homework\AI\images\shoes1.png" alt="nike just do it cover banner">
             </div>
-            <div>
-                <h1 style="  text-align: center; font-weight:1000; font-size: 3em;">WIN FROM THE START</h1>
-                <a href="">Shop Now</a>
+            <div class="slides">
+                <img src="C:\Users\Salman\Desktop\homework\AI\images\shoes2.png" alt="nike just do it cover banner">
             </div>
-
+            <div class="slides">
+                <img src="C:\Users\Salman\Desktop\homework\AI\images\shoes3.png" alt="nike just do it cover banner">
+            </div>
+            <div class="slides">
+                <img src="C:\Users\Salman\Desktop\homework\AI\images\shoes4.png" alt="nike just do it cover banner">
+            </div>
+            
+            
+            
         </div>
-         <h1 style="font-size: 3em; font-weight: bolder;">Products</h1><br>
+        <a href="#" class="next" onclick="plusSlides(1)">&#10095;</a>
+    </div>
+
+        <div style="text-align:center">
+            <span class="dot" onclick="currentSlide(1)"></span>
+            <span class="dot" onclick="currentSlide(2)"></span>
+            <span class="dot" onclick="currentSlide(3)"></span>
+            <span class="dot" onclick="currentSlide(4)"></span>
+          </div>
+        <div class="shopNow">
+            <h1 style="  text-align: center; font-weight:1000; font-size: 3em;">WIN FROM THE START</h1>
+            <a href="">Shop Now</a>
+        </div>
+        <h1 style="font-size: 3em; font-weight: bolder;">Products</h1><br>
         <div class="prodContainer">
             <div class="prodRow">
                
@@ -175,5 +196,37 @@
     </footer>
 
 </body>
+
+<script>
+    let slideIndex=1;
+    showSlide(slideIndex);
+    
+    function plusSlides(n){
+        showSlide(slideIndex+=n);
+    }
+
+    function currentSlide(n){
+        slideIndex=n;
+        showSlide(slideIndex);
+    }
+
+    function showSlide(n){
+        let slides=document.getElementsByClassName("slides");
+        let dots= document.getElementsByClassName("dot")
+    
+    if( n > slides.length){ slideIndex = 1 }
+    if( n < 1 ) { slideIndex = slides.length }
+
+        
+
+    for(let i=0; i<slides.length;i++){
+        slides[i].style.display= "none";
+        dots[i].className = dots[i].className.replace(" active", "");
+    }
+    slides[slideIndex-1].style.display="block";
+    dots[slideIndex-1].className += " active";
+    console.log(slideIndex);
+    }
+</script>
 
 </html>
