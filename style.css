@@ -6,10 +6,6 @@ body{
     font-family: "Helvetica Now Text", Helvetica, Arial, sans-serif;;
 
 }
-main{
-    flex: auto;
-    flex-flow: wrap;
-}
 
 .header{
     padding: 5px;
@@ -67,25 +63,22 @@ nav a:hover{
 }
 
 .slideShowContainer{
-    /* width: 100%; */
     margin-top: 2%;
     margin: auto;
     display: inline-flex;
     height: 70vh;
 }
 .slides {
-    animation-name: fade;
-    animation-duration: 1.5s;
+    
   }
 .slides{
     display: none;
-    transition: fade ease-in 1s;
+    animation-name: fade;
+    animation-duration: 1.5s;
 }
 
 .slides img{
     height: 100%;
-    padding-right: 2%;
-    padding-left: 2%;
 }
 
 .dot {
@@ -124,15 +117,6 @@ nav a:hover{
     font-size: x-large;
     align-self: center;
 }
-
-.prev{
-    order: -1;
-}
-
- .slider a:hover{
-    background-color: hsl(0, 0%, 49%);
-}
-
 .prodRow{
     display: flex;
     margin-bottom: 26px;
