@@ -59,6 +59,7 @@ nav a:hover{
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
+    align-items: center;
     margin: auto;
 }
 
@@ -110,12 +111,16 @@ nav a:hover{
     border-radius: 25px;
 }
 .next, .prev{
-    display: inline-block;
     text-decoration: none;
-    color: hsl(0, 0%, 93%);
-    border-radius: 50px;
-    font-size: x-large;
-    align-self: center;
+    color: hsl(0, 0%, 0%);
+    font-size: xx-large;
+}
+
+.next :hover{
+    background-color: hsl(0, 0%, 61%);    
+} 
+.prev :hover{
+    background-color: hsl(0, 0%, 61%);
 }
 .prodRow{
     display: flex;
